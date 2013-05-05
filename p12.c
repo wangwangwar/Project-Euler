@@ -19,9 +19,9 @@ int main(void) {
 
 int num_of_divisor(unsigned long long number) {
     int num = 0;
-    for (int i = 2; i <= number/2; i++) {
+    for (int i = 2; i * i <= number; i++) {
         if (number % i == 0) {
-            num++;
+            num += 2;
         }
     }
     return num + 2;
